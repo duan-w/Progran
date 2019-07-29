@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/Signup.css">
+    <script src="./js/signup.js"></script>
+    <script src="./js/ajax.js"></script>
+    <script>
+        function main(){
+            let _btn=document.getElementById("btn");
+            let _hook=document.getElementById("hook_left");
+            let _tips=document.getElementById("tips");
+                _btn.onclick=function(){//AJAX链接数据库，插入数据
+                    let _account=document.querySelector(".phone").value;
+                    let _pwd=document.getElementById("pwd").value;
+                    if(!(_account===""&&_pwd==="")){
+                        _hook.onclick=function(){
+                            if(_hook.checked===true){
+                                _tips.style.display="none";
+                                var _ajax=new Ajax();
+                                _ajax.request({
+                                    method:"post",
+                                    url:"./API/signUp.php",
+                                    data:"name="+_account+"&password="+_pwd,
+                                    success:function(_data){
+                                        console.log(_data)
+                                    }
+                                });
+                                window.location.href="./index.html";
+                            }else{
+                                _tips.style.display="block";
+                            }
+                        }
+                        
+                    }
+                    
+                }
+            Test();
+            yzcode();
+            hook();
+        }
+        window.onload=main;
+    </script>
+</head>
+<body>
+    <div class="top">
+        <div class="top_1 common">
+            <div class="top_left"></div>
+            <div class="top_right"></div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_1 common">
+            <div class="signUp">
+                <div class="signUp_top">
+                    <h3>会员注册</h3>
+                    <span>已注册可<a style="color:red; cursor: pointer;">直接登陆</a></span>
+                </div>
+               <div class="signUp_bottom">
+                    <form action="">
+                        <div class="phone_1">
+                            <input type="text" placeholder="请输入手机号" class="phone">
+                            <img src="./images/accountOK.png" id="ok1"/>
+                            <img src="./images/accountX.png" id="X1"/>
+                            <p id="phone_tps">请输入正确的手机号</p>
+                        </div>
+                        <div class="pwd_1">
+                            <input type="password" placeholder="密码由6-20位字母，数字和符号组合" class="pwd" id="pwd">
+                            <img src="./images/accountOK.png" id="ok2"/>
+                            <img src="./images/accountX.png" id="X2"/>
+                            <p id="pwd_tps">请输入6-20位密码</p>
+                        </div>
+                        <div class="pwd_1">
+                            <input type="password" placeholder="请再次输入上面的密码" class="pwd2" id="pwd2">
+                            <img src="./images/accountOK.png" id="ok3"/>
+                            <img src="./images/accountX.png" id="X3"/>
+                            <p id="pwd2_tps">请输入正确的密码</p>
+                        </div>
+                        <div class="yz">
+                            <input type="text" name="" id="yz_left" placeholder="请输入验证码">
+                            <img src="./images/accountOK.png" id="ok4"/>
+                            <img src="./images/accountX.png" id="X4"/>
+                            <p id="yz_right"></p>
+                        </div>
+                        <div class="hook">
+                            <input type="checkbox" id="hook_left">
+                            <p id="hook_right">我已阅读并接受以下条款：《唯品会服务条款》《隐私条款》《唯品支付用户服务协议》</p>
+                        </div> 
+                        <p id="tips">接受服务条款才能注册</p>
+                        <a href="##" id="btn">立即注册</a>   
+                    </form>
+               </div> 
+            </div>
+        </div>      
+    </div>
+    <div class="footer common">
+        <p>Copyright 2008-2019 vip.com，All Rights Reserved ICP证：粤 B2-20080329</p>
+    </div>
+</body>
+</html>

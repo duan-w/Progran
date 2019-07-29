@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情页</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/details.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <script src="./js/details.js"></script>
+    <script>
+        function main(){
+            Close();
+			select();
+            Sign();
+            Magnifier();
+            evens()
+        }
+        window.onload=main;
+    </script>
+</head>
+<body>
+    <div class="head">
+		<div class="head_1 common">
+			<div class="head_left">
+				<span>北京市<a href="#" class="iconfont">&#xe627;</a> </span>
+				<div class="line"></div>
+				<div id="urban">
+					<p class="urban_top"><span>请选择你所在的收货地区</span><img id="Close" src="images/up.png" height="100%"/> </p>
+					<div class="head_left_select">
+						<p href="##">省份</p>
+					</div>
+					<ul>
+						<li><a href="##" id="pink">北京市</a></li>
+						<li><a href="##">天津市</a></li>
+						<li><a href="##">河北省</a></li>
+						<li><a href="##">山西省</a></li>
+						<li><a href="##">内蒙古自治区</a></li>
+						<li><a href="##">辽宁省</a></li>
+						<li><a href="##">吉林省</a></li>
+						<li><a href="##">黑龙江</a></li>
+						<li><a href="##">上海市</a></li>
+						<li><a href="##">江苏省</a></li>
+						<li><a href="##">浙江省</a></li>
+						<li><a href="##">安徽省</a></li>
+						<li><a href="##">福建省</a></li>
+						<li><a href="##">江西省</a></li>
+						<li><a href="##">山东省</a></li>
+						<li><a href="##">河南省</a></li>
+						<li><a href="##">湖北省</a></li>
+						<li><a href="##">湖南省</a></li>
+						<li><a href="##">广东省</a></li>
+						<li><a href="##">广西壮族自治区</a></li>
+						<li><a href="##">湖南省</a></li>
+						<li><a href="##">重庆市</a></li>
+						<li><a href="##">四川省</a></li>
+						<li><a href="##">贵州省</a></li>
+						<li><a href="##">云南省</a></li>
+						<li><a href="##">西藏自治区</a></li>
+						<li><a href="##">陕西省</a></li>
+						<li><a href="##">甘肃省</a></li>
+						<li><a href="##">青海省</a></li>
+						<li><a href="##">宁夏回族自治区</a></li>
+						<li><a href="##">新疆维吾尔族</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="head_right">
+				<ul>
+					<li id="Sign"><a href="signIn.html">请登录</a>/
+						<div class="line" id="hidd_line"></div>
+						<div id="hidd_Sign">
+							<div class="hidd_top"> 
+								<span><img src="images/xiao.png"/></span>
+								 <p>
+									 <a href="#">您好！</a>
+									 <a href="signIn">[请登录]</a> 
+								 </p>
+							</div>
+							<ul>
+								<li><a href="##">我的收藏</a></li>
+								<li><a href="##">我的订单</a></li>
+								<li><a href="##">零钱</a></li>
+								<li><a href="##">我的优惠券</a></li>
+								<li><a href="##">我的唯品币</a></li>
+								<li><a href="##">唯品金融</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="SignUP.html">注册</a>/</li>
+					<li><a href="#">签到有礼</a>/</li>
+					<li><a href="#">我的订单</a>/</li>
+					<li><a href="#">我的特卖</a>/</li>
+					<li><a href="#">会员俱乐部</a>/</li>
+					<li><a href="#">客户服务</a>/</li>
+					<li><a href="#">手机版</a>/</li>
+					<li><a href="#">更多</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="search_1 common">
+		<a href="##"><img src="images/logo.png"/></a>
+		<form action="">
+			<input type="text" placeholder="连衣裙" class="sear">
+			<input type="button" class="btn">
+		</form>
+		<div class="shopping">
+			<span class="iconfont">&#xe605;</span>
+			<span><a href="Catr.html" target="_blank">购物车</a></span>
+			<div class="circle">0</div>
+		</div>
+	</div>
+<div class="nav_big">
+	<div class="nav common">
+		<ul>
+			<li class="nav_left">
+				<a href="#"><span class="iconfont" style="font-size:18px">&#xe67c;</span>商品分类</a>
+				<ul id="menu">
+					<li><a href="#">女装/男装/内衣</a></li>
+					<li><a href="#">女鞋/男鞋/鞋包</a></li>
+					<li><a href="#">护肤彩妆/个护</a></li>
+					<li><a href="#">运动户外</a></li>
+					<li><a href="#">家电数码</a></li>
+					<li><a href="#">母婴童装</a></li>
+					<li><a href="#">手表配饰</a></li>
+					<li><a href="#">居家用电</a></li>
+					<li><a href="#">唯品生活</a></li>
+					<li><a href="#">唯品国际/唯品奢</a></li>
+				</ul>
+				<div class="data"></div>
+			</li>
+		</ul>
+		
+		<ul class="nav_right">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">最后疯抢</a></li>
+			<li><a href="#">唯品快抢</a></li>
+			<li><a href="#">女装</a></li>
+			<li><a href="#">母婴</a></li>
+			<li><a href="#">家电</a></li>
+			<li><a href="#">国际</a></li>
+			<li><a href="#">美妆</a></li>
+			<li><a href="#">鞋包</a></li>
+			<li><a href="#">男装</a></li>
+			<li><a href="#">预告</a></li>
+			<li><a href="#">更多ˇ</a></li>
+		</ul>
+	</div>
+</div>
+<div class="main">
+    <div class="main_1 common">
+        <div class="main_left">
+            <div class="Magnifier">
+                <div class="big_img">
+                    <div class="show_img">
+                        <img src="./images/fdjbig.jpg" alt="">
+                    </div>
+                    <div class="block"></div>
+                </div>
+                <div class="small_img">
+                    <img src="https://a.vpimg2.com/upload/merchandise/pdcvop/00103437/10005540/1021746843-1760139798430654464-1760139798430654466-1.jpg"/> 
+                    <img src="https://a.vpimg2.com/upload/merchandise/pdcvop/00103437/10005540/1296750029-1760139798430654464-1760139798430654466-2.jpg"/>
+                    <img src="https://a.vpimg2.com/upload/merchandise/pdcvop/00103437/10005540/770813607-1760139798430654464-1760139798430654466-3.jpg"/>
+                    <img src="https://a.vpimg2.com/upload/merchandise/pdcvop/00103437/10005540/1894357348-1760139798430654464-1760139798430654466-4.jpg"/>
+                    <img src="https://a.vpimg2.com/upload/merchandise/pdcvop/00103437/10005540/1881645310-1760139798430654464-1760139798430654466-15.jpg"/>
+                </div>
+            </div>
+            <div class="uncncode">
+                <span>商品编码：9930120305083 </span>
+                <span>收藏商品</span>
+            </div>
+            <div class='main_left_bottom'>
+               <img src="./images/xqymain-left-bottom.png"/> 
+            </div>
+        </div>
+        <div class="main_right">
+            <p class="one">可可尼</p>
+            <p>可可尼2019秋装新款女装时尚图案印花刺绣舒适宽松休闲T恤女</p>
+            <p>时尚印花 刺绣花边 舒适面料</p>
+            <div class="title">
+                <b>$839</b>
+                <span>¥1199</span>  
+                <span>7折</span>
+            </div>
+            <div class="size">
+                <p>尺码</p>
+                <a href="##">155/80A/Xs</a>
+                <a href="##">160/84A/S</a>
+                <a href="##">165/88A/M</a>
+            </div>
+            <div class="num">
+                <p>数量</p>
+                <div class="box">
+                    <a>-</a>
+                    <b>1</b>
+                    <span>+</span>
+                </div>
+                <span style="line-height:30px;margin-left: 10px;">仅剩8件，抓紧时间抢购哦！</span>
+            </div>
+            <div class="fq">
+                <p>分期</p>
+                <span>最高可分24期,每期￥44.18</span>
+            </div>
+            <button>
+                加入购物袋
+            </button>
+            <div class="main_right_bottom">
+                <p>客服 <a>在线客服(09:00-22:00)</a></p>
+                <div>服务 <img src="./images/xqymainiright.png"/></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

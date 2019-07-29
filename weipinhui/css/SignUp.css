@@ -1,0 +1,176 @@
+.top{
+    height: 100px;
+    width: 100%;
+    background: #fff;
+}
+.top_1{
+    height: 100px;
+    background: #fff;
+}
+.top_left{
+    width: 125px;
+    height:100%;
+    background: url(../images/signUp-top.png) -308px -57px;
+    float: left;
+    cursor: pointer;
+}
+.top_right{
+    width: 305px;
+    height: 100%;
+    float: right;
+    background: url(../images/signUp-top.png) 0 0;
+    cursor: pointer;
+}
+.main{
+    width: 100%;
+    height: 650px;
+    background: url(../images/background-1.jpg) top center no-repeat;
+}
+.main_1{
+    height: 650px;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+.signUp{
+    width: 360px;
+    background: #fff;
+    float:right;
+}
+.signUp_top{
+    height: 50px;
+    width: 360px;
+    padding: 0 30px;
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+.signUp_top h3{
+    font-size: 18px;
+    color: #666;
+    float: left;
+    line-height: 50px;
+}
+.signUp_top span{
+    float: right;
+    line-height: 50px;
+}
+.signUp_bottom{
+    padding: 30px;
+    box-sizing: border-box;
+}
+.phone_1,.pwd_1,.yz{
+    position: relative;
+}
+#phone_tps{
+    position: absolute;
+    bottom: 8px;
+    color: red;
+    display: none;
+}
+form .phone{
+    width: 248px;
+    height: 32px;
+    border:1px solid #666;
+    padding: 6px 0 6px 50px;
+    line-height: 18px;
+    background: url(../images/signshouji.png) no-repeat 10px center;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+#ok1,#ok2,#ok3,#X1,#X2,#X3{
+    position: absolute;
+    top: 13px;
+    right: 5px;
+    display: none;
+}
+#ok4,#X4{
+    position: absolute;
+    left: 132px;
+    top: 12px;
+    display: none;
+}
+form .pwd,form .pwd2{
+    width: 248px;
+    height: 32px;
+    border:1px solid #666;
+    padding: 6px 0 6px 50px;
+    line-height: 18px;
+    background: url(../images/signsuozi.png) no-repeat 10px center;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+#pwd_tps{
+    position: absolute;
+    bottom: 8px;
+    color: #999;
+    display: none;
+}
+#pwd2_tps{
+    position: absolute;
+    bottom: 6px;
+    color: red;
+    display: none;
+}
+form .yz{
+    width: 100%;
+    height: 46px;
+    margin-bottom: 30px;
+}
+form #yz_left{
+    width: 106px;
+    height: 32px;
+    line-height: 18px;  
+    padding: 6px 0 6px 50px;
+    background: url(../images/signxinxi.png) no-repeat 10px center;
+    border:1px solid #666;
+    border-radius: 3px;
+    float: left;
+}
+form #yz_right{
+    width: 106px;
+    height: 32px;
+    padding:0 10px;
+    height: 46px;
+    background: #d0d0d0;
+    float: right;
+    border-radius: 3px;
+    font-size: 26px;
+    text-align: center;
+    line-height: 42px;
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing:7px;
+}
+form .hook{
+    width: 100%;
+    height: 40px;
+}
+form #hook_left{
+    width: 19px;
+    height: 25px;
+    float: left;
+    margin-right: 5px;
+}
+form #tips{
+    color: #f64a4a;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+form  #btn{
+    font-size: 16px;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #f10180;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+}
+.footer{
+    height: 78px;
+    background: #fff;
+    text-align: center;
+    line-height: 78px;
+}

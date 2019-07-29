@@ -1,0 +1,117 @@
+.nav{
+	width:100%;
+	height:78px;
+	border-bottom:2px solid #f3168a;
+	overflow:hidden;
+}
+.nav_1{
+	height:78px;
+	display: flex;
+	justify-content:space-between;
+}
+.nav_1 .nav_right{
+	width:416px;
+	height:100%;
+}
+.nav_right_top,.nav_right_bottom{
+	width:100%;
+	height:30px;
+}
+.nav_right_top li,.nav_right_bottom li{
+	float:left;
+}
+.nav_right_top{
+	padding-top:10px;
+}
+.nav_right_top li a{
+	padding:0 10px;
+	color:grey;
+}
+.nav_right_bottom img{
+	vertical-align:middle;
+}
+.nav_right_bottom li{
+	margin-right:15px;
+}
+
+.title_top{
+	font-size:18px;
+	height:54px;
+	border-bottom:1px solid #d0d0d0;
+	font-weight:bold;
+	margin-top: 30px;
+}
+.container{
+	height:300px;
+	margin-top:20px;
+}
+.title_top ul li{
+	float:left;
+	line-height:54px;
+	padding:0 10px;
+}
+#box{
+	width:100%;
+	height:100px;
+	border:1px solid #ccc;
+	margin-top:30px;
+	background:#FCFCFC;
+	padding:20px 0;
+	display:flex;
+}
+#tu{
+	width: 100px;
+	height: 74px;
+}
+#box img{
+	margin-left:20px;
+}
+.ID{
+	width:183px;
+	height:36px;
+	line-height:24px;
+	padding:0 10px;
+}
+.comment{
+	width:140px;
+	height:35px;
+	padding:2px 20px;
+	color:#ccc;
+}
+.money{
+	padding:0 20px;
+	color:red;
+}
+.event{
+	width:77px;
+	height:25px;
+	padding:0 50px;
+}
+.event div{
+	height:100%;
+	width:15px;
+	background:#ccc;
+	cursor:pointer;
+	display:block;
+	text-align:center;
+	line-height:25px;
+}
+.event input{
+	width:35px;
+	height:100%;
+	text-align: center;
+}
+.event div,input{
+	float:left;
+	border:none;
+	border:1px solid #ccc;
+}
+#delete{
+	width:60px;
+	height:60px;
+	margin-left:100px;
+	
+}
+#delete p{
+	line-height:35px;
+}

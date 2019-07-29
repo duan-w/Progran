@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catr</title>
+    <link href="css/common.css" rel="stylesheet" type="text/css"/>
+	<link href="css/Cart.css" rel="stylesheet" type="text/css"/>
+	<script src="js/Catr.js"></script>
+	<script>
+		function event(_cart){
+			var _remove=document.getElementById("remove");
+				console.log(_remove)
+		}
+		function ajax(){
+			var _xhr=new XMLHttpRequest();
+			var data;
+			_xhr.onreadystatechange=function(){
+				if(_xhr.readyState===4){
+					data=window.eval("("+_xhr.responseText+")");
+					create(data)
+				}
+			}
+			_xhr.open("post","json/shopping.json",true);
+			_xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			_xhr.send(null);
+		}
+		function create(data){
+			var _cart=new Cart();
+			//	_cart.push("20190704",1,"尺码：L(165/84A)")
+			//	 _cart.push("20190705",1,"尺码：S(165/84A)")
+			var _container=document.getElementsByClassName("container")[0];
+			var list="";
+			if(_cart.take()){
+				for(var i=0;i<_cart.storage.length;i++){
+					for(var n=0;n < data.length;n++){
+						if(_cart.storage[i].ID==data[n].ID&&_cart.storage[i].comment==data[n].model){
+							list+='<div id="box">'
+							+'<div id="tu" style="width: 100px;height: 74px;"><img src="'+data[n].img+'" style="height:100%"/></div>'
+							+'<p class="ID">'+data[n].title+'</p>'
+							+'<p class="comment">'+data[n].model+'</p>'
+							+'<p class="money">'+data[n].money+'</p>'
+							+'<div class="event">'
+							+'<div>-</div>'
+							+'<input type="text" id="text" style="text-align: center">'
+							+'<div>+</div>'
+							+'</div>'
+							+'<div id="delete">'
+							+'<p>移入收藏夹</p>'
+							+'<p class="delete" id="remove">移出</p>'
+							+'</div>'
+							+'</div>';
+						}
+					}
+				}
+				_container.innerHTML=list;
+				var _remove=document.getElementById("remove");
+				console.log(_remove)
+				event(_cart)
+			}			
+		}
+		function main(){
+			ajax()
+
+		
+		}
+		window.onload=main;
+	</script>
+</head>
+<body>
+	<div class="nav">
+		<div class="nav_1 common">
+			<img src="images/Catr_logo.png"/>
+			<div class="nav_right">
+				<ul class="nav_right_top">
+					<li><a href="##">登录</a><a href="##">注册</a>|</li>
+					<li><a href="##">客服热线:400-6789-888</a>|</li>
+					<li><a href="##">在线客服</a>|</li>
+					<li><a href="##">会员服务</a></li>
+				</ul>
+				<ul class="nav_right_bottom">
+					<li><img src="images/x1.png"/><span>100%正品保证</span></li>
+					<li><img src="images/x2.png"/><span>七天无理由放心退</span></li>
+					<li><img src="images/x3.png"/><span>限时抢购</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="title_top common" style="width: 1000px;	margin-top: 30px;">
+		<ul>
+			<li style="color:#f3168a">特卖商品</li>
+			<li style="color:#d0d0d0">|</li>
+			<li>唯品医药</li>
+		</ul>
+	</div>
+	<div class="container common">
+
+		<!-- <div id="box" class="">
+			<div class="tu"><img src="images/shp_tu.png"/></div>
+			<p class="ID">小米手机壳八保护壳超薄全包磨砂防摔探索版男女8se屏幕指纹</p>
+			<p class="comment">
+				颜色分类:小米8青春版【石墨灰】+钢化膜
+			</p>
+			<p class="money">￥56.00</p>
+			<div class="event">
+				<div>-</div>
+				<input type="text" id="text">
+				<div>+</div>
+			</div>
+			<div id="delete">
+				<p>移入收藏夹</p>
+				<p class="delete">移出</p>
+			</div>
+		</div> -->
+	</div>
+</body>
+</head>

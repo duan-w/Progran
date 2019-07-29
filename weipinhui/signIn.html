@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/signIn.css">
+    <script src="./js/ajax.js"></script>
+    <script>
+        function main(){
+            let _btn=document.getElementById("btn");
+            let _pwd_tps=document.getElementById("pwd_tps");
+                _btn.onclick=function(){
+                    let _account=document.querySelector(".phone").value;
+                    let _password=document.querySelector("#pwd").value;
+                    let _ajax=new Ajax();
+                        _ajax.request({
+                        method:"post",
+                        url:"./API/signIn.php",
+                        data:"account="+_account+"&pwd="+_password,
+                        success:function(_data){  
+                            _data=window.eval("("+_data+")");
+                            console.log(_data.code)
+                            if(_data.code===200){
+                                alert("登录成功");
+                                _pwd_tps.style.display="none";
+                                window.location.href="./index.html"
+                            }else{
+                               _pwd_tps.style.display="block";
+                               _pwd_tps.style.color="red";
+                            }
+                        }
+                    
+                    })
+                }
+
+        }
+        window.onload=main;
+    </script>
+</head>
+<body>
+    <div class="top">
+        <div class="top_1 common">
+            <div class="top_left"></div>
+            <div class="top_right"></div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_1 common">
+            <div class="signIn">
+                <div class="signIn_top">
+                    <h3>账号登录</h3>
+                </div>
+                <div id="signIn_bottom">
+                    <div class="phone_1">
+                            <input type="text" placeholder="请输入手机号" class="phone">
+                            <img src="./images/accountOK.png" id="ok1"/>
+                            <img src="./images/accountX.png" id="X1"/>
+                            <p id="phone_tps">请输入正确的手机号</p>
+                    </div>
+                    <div class="pwd_1">
+                            <input type="password" placeholder="密码由6-20位字母，数字和符号组合" class="pwd" id="pwd">
+                            <img src="./images/accountOK.png" id="ok2"/>
+                            <img src="./images/accountX.png" id="X2"/>
+                            <p id="pwd_tps">密码错误</p>
+                    </div>
+                    <div class="hook">
+                        <p><input type="checkbox"><span>记住用户名</span></p>
+                        <p>忘记密码</p>
+                    </div>
+                    <button id="btn">登录</button>
+                    <div class="weix" style="cursor:pointer"></div>
+                    <ul>
+                        <li><a href="##" target="_blank" rel="noopener noreferrer">新浪微博</a>|</li>
+                        <li><a href="##" target="_blank" rel="noopener noreferrer">QQ</a>|</li>
+                        <li><a href="##" target="_blank" rel="noopener noreferrer">支付宝</a>|</li>
+                        <li><a href="##" target="_blank" rel="noopener noreferrer">更多ˇ</a>|</li>
+                        <li><a href="##" target="_blank" rel="noopener noreferrer">免费注册</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer common">
+        <p>Copyright 2008-2019 vip.com，All Rights Reserved ICP证：粤 B2-20080329</p>
+    </div>
+</body>
+</html>

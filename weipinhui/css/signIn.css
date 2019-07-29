@@ -1,0 +1,158 @@
+.top{
+    height: 100px;
+    width: 100%;
+    background: #fff;
+}
+.top_1{
+    height: 100px;
+    background: #fff;
+}
+.top_left{
+    width: 125px;
+    height:100%;
+    background: url(../images/signUp-top.png) -308px -57px;
+    float: left;
+    cursor: pointer;
+}
+.top_right{
+    width: 305px;
+    height: 100%;
+    float: right;
+    background: url(../images/signUp-top.png) 0 0;
+    cursor: pointer;
+}
+.main{
+    width: 100%;
+    height: 650px;
+    background: url(../images/background-1.jpg) top center no-repeat;
+}
+.main_1{
+    height: 650px;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+.signIn{
+    width: 360px;
+    background: #fff;
+    float:right;
+}
+.signIn_top{
+    height: 50px;
+    width: 360px;
+    padding: 0 30px;
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+.signIn_top h3{
+    font-size: 18px;
+    color: #f10180;
+    line-height: 50px;
+    text-align: center;
+}
+#signIn_bottom{
+    padding: 30px;
+    box-sizing: border-box;
+}
+.phone_1,.pwd_1{
+    position: relative;
+}
+.phone{
+    width: 248px;
+    height: 32px;
+    border:1px solid #666;
+    padding: 6px 0 6px 50px;
+    line-height: 18px;
+    background: url(../images/signshouji.png) no-repeat 10px center;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+#phone_tps{
+    position: absolute;
+    bottom: 8px;
+    color: red;
+    display: none;
+}
+#ok1,#ok2,#X1,#X2{
+    position: absolute;
+    top: 13px;
+    right: 5px;
+    display: none;
+}
+.pwd{
+    width: 248px;
+    height: 32px;
+    border:1px solid #666;
+    padding: 6px 0 6px 50px;
+    line-height: 18px;
+    background: url(../images/signsuozi.png) no-repeat 10px center;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+#pwd_tps{
+    position: absolute;
+    bottom: 8px;
+    color: #999;
+    display: none;
+}
+.hook p:nth-child(1){
+    float: left;
+}
+.hook p:nth-child(1) input{
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-right: 5px;
+}
+.hook p:nth-child(1) span{
+    float: right;
+}
+.hook p:nth-child(2){
+    float: right;
+}
+button{
+    width: 100%;
+    height: 46px;
+    background-color: #f10180;
+    border: 1px solid #f10180;
+    border-radius: 3px;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 19px;
+    cursor: pointer;
+}
+.weix{
+    width: 100%;
+    height: 45px;
+    background: url(../images/signinweix.png);
+    margin: 10px 0;
+}
+ul li{
+    float: left;
+    color: #ccc;
+}
+ul li a{
+    padding: 0px 10px;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    height: 78px;
+    background: #fff;
+    text-align: center;
+    line-height: 78px;
+}
